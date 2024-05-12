@@ -4,11 +4,17 @@ import org.example.Utils.UserTypes;
 
 public class QuitCommand extends AbstractCommand{
 
-    public QuitCommand(){
-        setAllowedTypeUser(UserTypes.ANONYMOUS);
+    public QuitCommand(String[] args){
+        super(args);
+        addAllowedTypeUser(UserTypes.ANONYMOUS);
+        addAllowedTypeUser(UserTypes.AUTHENTICATED);
+        addAllowedTypeUser(UserTypes.ADMIN);
+        setSuccessMessage("Quitting");
+        setFailMessage("");
     }
     @Override
-    public void execute() {
-        System.out.println("Quitting");
+    public boolean execute() {
+        return true;
     }
+
 }

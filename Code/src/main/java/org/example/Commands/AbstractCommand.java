@@ -2,16 +2,45 @@ package org.example.Commands;
 
 import org.example.Utils.UserTypes;
 
+import java.util.ArrayList;
+
 public abstract class AbstractCommand implements Command {
 
-    private UserTypes userType;
+    private ArrayList<UserTypes> userType;
+    private final String[] args;
+    private String successMessage;
+    private String failMessage;
 
-    public void setAllowedTypeUser(UserTypes newUserType){
-        userType = newUserType;
+    public AbstractCommand(String[] args) {
+        this.args = args;
+        userType = new ArrayList<>();
     }
 
-    public UserTypes getAllowedTypeUser(){
+    public void addAllowedTypeUser(UserTypes newUserType){
+        userType.add(newUserType);
+    }
+
+    public ArrayList<UserTypes> getAllowedTypeUser(){
         return userType;
     }
 
+    public String[] getArgs() {
+        return args;
+    }
+
+    public String getSuccessMessage() {
+        return successMessage;
+    }
+
+    public void setSuccessMessage(String successMessage) {
+        this.successMessage = successMessage;
+    }
+
+    public String getFailMessage() {
+        return failMessage;
+    }
+
+    public void setFailMessage(String failMessage) {
+        this.failMessage = failMessage;
+    }
 }

@@ -1,5 +1,7 @@
 package org.example.CommandInterface;
 
+import java.util.Arrays;
+
 public class CommandFormat {
     private final String command;
     private final String[] args;
@@ -20,5 +22,15 @@ public class CommandFormat {
 
     public String[] getArgs() {
         return args;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder argsString = new StringBuilder();
+        for (String arg : args) {
+            argsString.append(arg).append(' ');
+        }
+
+        return command+ " " + argsString;
     }
 }

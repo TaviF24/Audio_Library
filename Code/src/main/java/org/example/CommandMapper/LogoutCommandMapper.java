@@ -1,20 +1,20 @@
 package org.example.CommandMapper;
 
 import org.example.Commands.AbstractCommand;
-import org.example.Commands.AuthenticationAndAuthorization.LoginCommand;
+import org.example.Commands.AuthenticationAndAuthorization.LogoutCommand;
 import org.example.Exceptions.InvalidNumberOfParametersException;
 
 import java.util.Optional;
 
-public class LoginCommandMapper implements CommandMapper{
+public class LogoutCommandMapper implements CommandMapper{
     @Override
     public Optional<AbstractCommand> tryMapCommand(String command, String[] args) {
-        if(!"login".equals(command)) {
+        if(!"logout".equals(command)){
             return Optional.empty();
         }
-        if(args.length != 2){
+        if(args.length != 0){
             throw new InvalidNumberOfParametersException(command);
         }
-        return Optional.of(new LoginCommand(args));
+        return Optional.of(new LogoutCommand(args));
     }
 }

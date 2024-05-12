@@ -1,11 +1,12 @@
 package org.example;
 
 import org.example.CommandInterface.CommandInterface;
-import org.example.Commands.Invoker;
-import org.example.Commands.LoginCommand;
+import org.example.DatabaseManager.Credits;
 import org.example.DatabaseManager.DBWrapper;
-import org.example.Users.AnonymousUser;
-import org.example.Users.User;
+import org.example.Data.Users.AnonymousUser;
+import org.example.Data.Users.User;
+
+import java.io.*;
 
 public class App {
 
@@ -13,13 +14,9 @@ public class App {
 
     public static void RUN() {
 
-        DBWrapper dbWrapper = new DBWrapper();
-        dbWrapper.createTables("jdbc:mysql://localhost:3306/AudioLibrary", "root", "parola123");
+        DBWrapper dbWrapper = new DBWrapper(Credits.getConnectionCredits());
+        dbWrapper.createTables();
 
-        User user = new AnonymousUser();
-
-        CommandInterface commandInterface = CommandInterface.getINSTANCE();
-        commandInterface.listenForCommands(user);
-
+        Session.start();
     }
 }
