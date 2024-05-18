@@ -36,10 +36,10 @@ public class AuditCommand extends AbstractCommand {
         }
         CommandForTable command = new CommandForTable("audit", (Integer) arrayList.get(0), true);
         forCheck[0] = "idUser";
-        forGet = new String[] {"command", "success"};
+        forGet = new String[] {"command", "success", "id"};
         arrayList = dbWrapper.selectCheckIfExists(command, forCheck, forGet);
 
-        PageManager pageManager = new PageManager(arrayList, 2);
+        PageManager pageManager = new PageManager(arrayList, 3);
         pageManager.createPages();
         setSuccessMessage(
                 pageManager.showCommandResult(
