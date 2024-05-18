@@ -86,3 +86,20 @@ A Java-based application that allows users to create and store songs and playlis
 ## Examples
 Check the [examples](./examples) folder to see some uses of the above commands.
 
+## More about Paging and Export/Import systems
+
+- Paging:
+  - The default number of elements per page is 5. To change it you must modify the file.(TODO: command to allow user to modify it)
+  - For the commands that have paging system you have to put the page index (if not, it will be considered the default). Even if it is the first time when you call that command, you can add the page index to the command.(TODO: maybe a cache system would be nice)
+- Export:
+  - The accepted formats are: json, csv, personal(.txt)
+  - I had to put some methods even I do not use them so the used libraries (for json and csv formats) would work well
+  - To export an object in csv format, that object must contain a list. In this code, I exported an object with a field playlistName and a list of songs. In the file will be only the list of songs, the playlistName field is inserted in the file name only.
+- Import:
+  - The accepted file extensions are json, csv and txt. For the txt file, the format should be in the same style as personal
+  - I had to put some methods even I do not use them here aswell (for the same reason)
+  - In this code, when importing from csv file, the playlistName field will be the name of the file
+  - To work well and get some data from importing, please try to respect the format as much as possible. If you do not know how the formats look, try to export some data or check the [formats]() folder.
+
+
+
