@@ -14,7 +14,10 @@ A Java-based application that allows users to create and store songs and playlis
 - Audit system: store all the commands given by users.
 
 ## Database diagram
-![Diagram image](./diagram.png)
+![Database diagram image](./diagram.png)
+
+## A very simplified view of the application structure
+<img src="./UMLtry.png" alt="UML diagram image" width="500"/>
 
 ## Types of users
 - Anonymous: Users who have not gone through a login step. Their access is limited to login and registration commands;
