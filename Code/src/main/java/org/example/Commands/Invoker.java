@@ -1,10 +1,6 @@
 package org.example.Commands;
 
-import org.example.Data.CommandForTable;
-import org.example.Data.Users.User;
-import org.example.DatabaseManager.Credits;
-import org.example.DatabaseManager.DBWrapper;
-import org.example.Printer;
+import org.example.Exceptions.Checked.AudioLibraryCheckedException;
 
 public class Invoker {
 
@@ -14,7 +10,7 @@ public class Invoker {
         this.command = command;
     }
 
-    public boolean runCommand(){
+    public boolean runCommand() throws AudioLibraryCheckedException {
         return command.execute();
     }
 

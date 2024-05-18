@@ -4,8 +4,8 @@ import org.example.Data.Users.User;
 import org.example.Data.Users.UserFactory;
 import org.example.DatabaseManager.Credits;
 import org.example.DatabaseManager.DBWrapper;
-import org.example.Exceptions.InexistentUserException;
-import org.example.Exceptions.UserAlreadyAdminException;
+import org.example.Exceptions.Unchecked.InexistentUserException;
+import org.example.Exceptions.Unchecked.UserAlreadyAdminException;
 import org.example.Utils.UserTypes;
 
 import java.util.ArrayList;

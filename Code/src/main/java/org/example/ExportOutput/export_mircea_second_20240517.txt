@@ -1,0 +1,13 @@
+songs
+3
+name -> "a", 
+author -> "b", 
+year -> 2003
+name -> "Americano", 
+author -> "LadyGaga", 
+year -> 2005
+name -> "Paradise", 
+author -> "Mircea Eliade", 
+year -> 2009
+playlistName -> second
+

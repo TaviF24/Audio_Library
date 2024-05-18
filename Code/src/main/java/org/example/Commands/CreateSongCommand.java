@@ -3,7 +3,7 @@ package org.example.Commands;
 import org.example.Data.Song;
 import org.example.DatabaseManager.Credits;
 import org.example.DatabaseManager.DBWrapper;
-import org.example.Exceptions.DataAlreadyAddedException;
+import org.example.Exceptions.Unchecked.DataAlreadyAddedException;
 import org.example.Utils.UserTypes;
 
 public class CreateSongCommand extends AbstractCommand{

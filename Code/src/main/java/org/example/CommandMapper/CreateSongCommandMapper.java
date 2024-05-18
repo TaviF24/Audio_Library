@@ -1,10 +1,9 @@
 package org.example.CommandMapper;
 
 import org.example.Commands.AbstractCommand;
-import org.example.Commands.CreatePlaylistCommand;
 import org.example.Commands.CreateSongCommand;
-import org.example.Exceptions.InvalidNumberOfParametersException;
-import org.example.Exceptions.InvalidTypeOfParameterException;
+import org.example.Exceptions.Unchecked.InvalidNumberOfParametersException;
+import org.example.Exceptions.Unchecked.InvalidTypeOfParameterException;
 
 import java.util.Optional;
 

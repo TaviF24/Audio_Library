@@ -21,10 +21,9 @@ public class SearchCommand extends AbstractCommand{
         String[] forCheck = new String[]{getArgs()[0]};
         String[] forGet = new String[]{"name", "author", "year", "id"};
         ArrayList<Object> arrayList = dbWrapper.selectSearch(new Song(getArgs()[1], getArgs()[1], 0), forCheck, forGet);
-        System.out.println("size " + arrayList.size());
         PageManager pageManager = new PageManager(arrayList,4);
         pageManager.createPages();
-        setSuccessMessage(pageManager.showCommandResult(1,"search " + getArgs()[0] + " " + getArgs()[1]));
+        setSuccessMessage(pageManager.showCommandResult(Integer.parseInt(getArgs()[2]),"search " + getArgs()[0] + " \"" + getArgs()[1] + "\""));
         return true;
     }
 }

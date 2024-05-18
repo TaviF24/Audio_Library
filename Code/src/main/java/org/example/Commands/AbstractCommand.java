@@ -6,10 +6,9 @@ import java.util.ArrayList;
 
 public abstract class AbstractCommand implements Command {
 
-    private ArrayList<UserTypes> userType;
+    private final ArrayList<UserTypes> userType;
     private final String[] args;
     private String successMessage;
-    private String failMessage;
 
     public AbstractCommand(String[] args) {
         this.args = args;
@@ -34,13 +33,5 @@ public abstract class AbstractCommand implements Command {
 
     public void setSuccessMessage(String successMessage) {
         this.successMessage = successMessage;
-    }
-
-    public String getFailMessage() {
-        return failMessage;
-    }
-
-    public void setFailMessage(String failMessage) {
-        this.failMessage = failMessage;
     }
 }

@@ -1,12 +1,12 @@
 package org.example.Commands;
 
-import org.example.AbstractTableClassMapper;
+import org.example.Data.AbstractTableClassMapper;
 import org.example.Data.CommandForTable;
 import org.example.Data.Users.User;
 import org.example.Data.Users.UserFactory;
 import org.example.DatabaseManager.Credits;
 import org.example.DatabaseManager.DBWrapper;
-import org.example.Exceptions.InexistentUserException;
+import org.example.Exceptions.Unchecked.InexistentUserException;
 import org.example.PageManager.PageManager;
 import org.example.Utils.UserTypes;
 

@@ -1,7 +1,5 @@
 package org.example.Data;
 
-import org.example.AbstractTableClassMapper;
-
 import java.util.HashMap;
 
 public class Playlist extends AbstractTableClassMapper {
@@ -11,6 +9,13 @@ public class Playlist extends AbstractTableClassMapper {
     private final String name;
 
     public Playlist(int idUser, String name) {
+        this.idUser = idUser;
+        this.name = name;
+        setCorrespondingTable("Playlists");
+    }
+
+    public Playlist(int id, int idUser, String name) {
+        this.id = id;
         this.idUser = idUser;
         this.name = name;
         setCorrespondingTable("Playlists");

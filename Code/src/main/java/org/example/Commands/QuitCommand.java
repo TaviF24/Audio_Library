@@ -10,7 +10,6 @@ public class QuitCommand extends AbstractCommand{
         addAllowedTypeUser(UserTypes.AUTHENTICATED);
         addAllowedTypeUser(UserTypes.ADMIN);
         setSuccessMessage("Quitting");
-        setFailMessage("");
     }
     @Override
     public boolean execute() {

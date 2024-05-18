@@ -1,6 +1,6 @@
 package org.example.PageManager;
 
-import org.example.Exceptions.InexistentPageException;
+import org.example.Exceptions.Unchecked.InexistentPageException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,6 @@ public class PageManager {
     private final List<String> content;
     private final static int elementsPerPage = 5;
     private final int fieldsPerElement;
-
     private int nrOfPages = 0;
     private final List<Page> pages;
     public PageManager(ArrayList<Object> content, int fieldsPerElement) {

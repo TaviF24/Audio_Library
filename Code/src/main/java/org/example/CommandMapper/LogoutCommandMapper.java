@@ -2,7 +2,7 @@ package org.example.CommandMapper;
 
 import org.example.Commands.AbstractCommand;
 import org.example.Commands.AuthenticationAndAuthorization.LogoutCommand;
-import org.example.Exceptions.InvalidNumberOfParametersException;
+import org.example.Exceptions.Unchecked.InvalidNumberOfParametersException;
 
 import java.util.Optional;
 

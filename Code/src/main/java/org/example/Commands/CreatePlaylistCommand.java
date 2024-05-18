@@ -1,10 +1,10 @@
 package org.example.Commands;
 
-import org.example.AbstractTableClassMapper;
+import org.example.Data.AbstractTableClassMapper;
 import org.example.Data.Playlist;
 import org.example.DatabaseManager.Credits;
 import org.example.DatabaseManager.DBWrapper;
-import org.example.Exceptions.DataAlreadyAddedException;
+import org.example.Exceptions.Unchecked.DataAlreadyAddedException;
 import org.example.Session;
 import org.example.Utils.UserTypes;
 

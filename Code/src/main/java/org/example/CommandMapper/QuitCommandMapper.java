@@ -1,8 +1,7 @@
 package org.example.CommandMapper;
 import org.example.Commands.AbstractCommand;
-import org.example.Commands.Command;
 import org.example.Commands.QuitCommand;
-import org.example.Exceptions.InvalidNumberOfParametersException;
+import org.example.Exceptions.Unchecked.InvalidNumberOfParametersException;
 
 import java.util.Optional;
 

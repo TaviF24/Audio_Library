@@ -2,8 +2,8 @@ package org.example.CommandMapper;
 
 import org.example.Commands.AbstractCommand;
 import org.example.Commands.SearchCommand;
-import org.example.Exceptions.InvalidNumberOfParametersException;
-import org.example.Exceptions.InvalidTypeOfParameterException;
+import org.example.Exceptions.Unchecked.InvalidNumberOfParametersException;
+import org.example.Exceptions.Unchecked.InvalidTypeOfParameterException;
 
 import java.util.Optional;
 
@@ -13,17 +13,23 @@ public class SearchCommandMapper implements CommandMapper{
         if(!"search".equals(command)){
             return Optional.empty();
         }
-        if(args.length<2){
+        if(args.length<2 || args.length>3){
             throw new InvalidNumberOfParametersException(command);
         }
         if(!"author".equals(args[0]) && !"name".equals(args[0])){
             throw new InvalidTypeOfParameterException(command);
         }
-        StringBuilder searchCriteria = new StringBuilder(args[1]);
-        for(int i=2; i<args.length; i++){
-            searchCriteria.append(" ").append(args[i]);
+        try{
+            if(args.length == 3){
+                Integer.parseInt(args[2]);
+            }
+        }catch (NumberFormatException e){
+            throw new InvalidTypeOfParameterException(command);
         }
-        String[] newArgs = new String[]{args[0], searchCriteria.toString()};
-        return Optional.of(new SearchCommand(newArgs));
+        if(args.length == 2){
+            String[] newArgs = new String[]{args[0], args[1], "1"};
+            return Optional.of(new SearchCommand(newArgs));
+        }
+        return Optional.of(new SearchCommand(args));
     }
 }

@@ -1,6 +1,6 @@
 package org.example.DatabaseManager;
 
-import org.example.AbstractTableClassMapper;
+import org.example.Data.AbstractTableClassMapper;
 import org.example.Data.CommandForTable;
 import org.example.Data.Users.User;
 
@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
             statement.execute(createTablePlaylistSongs);
 
         } catch (SQLException e) {
-            System.err.println("DBWrapper error\n" + e);
+            System.err.println("DBWrapper error. Failed to create the tables.\n" + e);
         }
     }
 
@@ -165,8 +165,6 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
         }
         selectString.append(conditions).append(";");
 
-//        System.out.println(selectString);
-
         /*
         SELECT fields FROM table WHERE column = ?[, AND column = ?, ...];
         */
@@ -191,7 +189,6 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
                         break;
                 }
             }
-
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while(resultSet.next()){
@@ -339,7 +336,6 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
             selectString.append(conditions);
         }
         selectString.append(";");
-        System.out.println(selectString);
 
         ArrayList<Object> results = new ArrayList<>();
         try(

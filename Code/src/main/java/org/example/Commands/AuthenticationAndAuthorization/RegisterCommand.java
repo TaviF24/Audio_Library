@@ -5,7 +5,7 @@ import org.example.Data.Users.UserFactory;
 import org.example.DatabaseManager.Credits;
 import org.example.Data.Users.User;
 import org.example.DatabaseManager.DBWrapper;
-import org.example.Exceptions.DataAlreadyAddedException;
+import org.example.Exceptions.Unchecked.DataAlreadyAddedException;
 import org.example.Session;
 import org.example.Utils.UserTypes;
 
@@ -17,7 +17,6 @@ public class RegisterCommand extends AbstractCommand {
         super(args);
         addAllowedTypeUser(UserTypes.ANONYMOUS);
         setSuccessMessage("Registered account with user name: " + args[0] + "\nYou are now authenticated as " + args[0]);
-//        setFailMessage("User with given username already exists! Please try again!");
     }
 
     @Override
@@ -31,7 +30,6 @@ public class RegisterCommand extends AbstractCommand {
             ArrayList<Object> results = dbWrapper.selectCheckIfExists(user, forCheck, forGet);
             if (!results.isEmpty()){
                 throw new DataAlreadyAddedException("User with given username already exists! Please try again!");
-    //            return false;
             }
             if(dbWrapper.getSizeOfTable(user) == 0)
                 user = UserFactory.create(UserTypes.ADMIN, getArgs());

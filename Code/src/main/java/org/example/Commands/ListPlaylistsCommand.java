@@ -1,8 +1,7 @@
 package org.example.Commands;
 
-import org.example.AbstractTableClassMapper;
+import org.example.Data.AbstractTableClassMapper;
 import org.example.Data.Playlist;
-import org.example.Data.Users.User;
 import org.example.DatabaseManager.Credits;
 import org.example.DatabaseManager.DBWrapper;
 import org.example.PageManager.PageManager;

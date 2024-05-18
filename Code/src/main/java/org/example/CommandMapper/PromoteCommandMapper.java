@@ -2,9 +2,8 @@ package org.example.CommandMapper;
 
 import org.example.Commands.AbstractCommand;
 import org.example.Commands.PromoteCommand;
-import org.example.Exceptions.InvalidNumberOfParametersException;
+import org.example.Exceptions.Unchecked.InvalidNumberOfParametersException;
 
-import java.util.Arrays;
 import java.util.Optional;
 
 public class PromoteCommandMapper implements CommandMapper{

@@ -1,12 +1,9 @@
 package org.example.Data.Users;
 
-import org.example.AbstractTableClassMapper;
-import org.example.Commands.AbstractCommand;
-import org.example.TableClassesMapper;
+import org.example.Data.AbstractTableClassMapper;
 import org.example.Utils.UserTypes;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 public abstract class User extends AbstractTableClassMapper {
 
@@ -26,10 +23,6 @@ public abstract class User extends AbstractTableClassMapper {
 
     public String getUsername() {
         return username;
-    }
-
-    public String getPassword() {
-        return password;
     }
 
     public void setUserTypes(UserTypes userTypes) {

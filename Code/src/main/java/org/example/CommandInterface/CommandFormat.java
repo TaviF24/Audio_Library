@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class CommandFormat {
     private final String command;
     private final String[] args;
+    private String originalCommand;
 
     public CommandFormat() {
         command = "";
@@ -22,6 +23,14 @@ public class CommandFormat {
 
     public String[] getArgs() {
         return args;
+    }
+
+    public String getOriginalCommand() {
+        return originalCommand;
+    }
+
+    public void setOriginalCommand(String originalCommand) {
+        this.originalCommand = originalCommand;
     }
 
     @Override
