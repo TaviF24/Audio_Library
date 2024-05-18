@@ -1,9 +1,8 @@
 package org.example.DTOStorage.Serializer;
 
-import org.example.DTOs.AbstractDTO;
-
 import java.io.IOException;
 import java.io.OutputStream;
+import org.example.DTOs.AbstractDTO;
 
 /**
  * Interface for serializing AbstractDTO objects to an OutputStream.

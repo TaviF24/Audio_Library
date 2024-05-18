@@ -1,8 +1,7 @@
 package org.example.Commands;
 
-import org.example.Utils.UserTypes;
-
 import java.util.ArrayList;
+import org.example.Utils.UserTypes;
 
 public abstract class AbstractCommand implements Command {
 
@@ -20,11 +19,11 @@ public abstract class AbstractCommand implements Command {
      *
      * @param newUserType the new user type to add
      */
-    public void addAllowedTypeUser(UserTypes newUserType){
+    public void addAllowedTypeUser(UserTypes newUserType) {
         userType.add(newUserType);
     }
 
-    public ArrayList<UserTypes> getAllowedTypeUser(){
+    public ArrayList<UserTypes> getAllowedTypeUser() {
         return userType;
     }
 

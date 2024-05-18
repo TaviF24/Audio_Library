@@ -22,7 +22,7 @@ public class LogoutCommand extends AbstractCommand {
             DBWrapper dbWrapper = new DBWrapper(Credits.getConnectionCredits());
             dbWrapper.saveCommand(Session.getSessionUser(), "logout", true);
             Session.setSessionUser(UserFactory.create(UserTypes.ANONYMOUS, new String[0]));
-        }catch (ClassNotFoundException e){
+        } catch (ClassNotFoundException e) {
             System.err.println("System error\n" + e);
             return false;
         }

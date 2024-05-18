@@ -1,15 +1,16 @@
 package org.example;
 
+import java.io.InputStreamReader;
+import java.io.Reader;
 import org.example.CommandInterface.CommandInterface;
 import org.example.Data.Users.AnonymousUser;
 import org.example.Data.Users.User;
 
-import java.io.InputStreamReader;
-import java.io.Reader;
-
 public class Session {
 
-    private static final Reader sourceInput = new InputStreamReader(System.in); // can be changed to read from files too, but needs try-catch
+    private static final Reader sourceInput =
+            new InputStreamReader(
+                    System.in); // can be changed to read from files too, but needs try-catch
     private static User sessionUser;
 
     public Session() {
@@ -30,7 +31,7 @@ public class Session {
      * This method initializes the session user as an anonymous user and starts the command interface to listen for commands.
      * </p>
      */
-    public static void start(){
+    public static void start() {
         Session.setSessionUser(new AnonymousUser());
 
         CommandInterface commandInterface = CommandInterface.getINSTANCE();

@@ -23,7 +23,7 @@ public class Playlist extends AbstractTableClassMapper {
 
     @Override
     public HashMap<String, Object> getColumns() {
-        HashMap<String, Object>hashMap = new HashMap<>();
+        HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("idUser", idUser);
         hashMap.put("name", name);
         hashMap.put("id", id);

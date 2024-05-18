@@ -1,7 +1,7 @@
 package org.example.DatabaseManager;
 
 public class Credits {
-    private Credits(){}
+    private Credits() {}
 
     /**
      * Retrieves the connection credentials for the database.
@@ -12,7 +12,8 @@ public class Credits {
      *
      * @return a {@link ConnectionCredits} object containing the database connection credentials.
      */
-    public static ConnectionCredits getConnectionCredits(){
-        return new ConnectionCredits("jdbc:mysql://localhost:3306/AudioLibrary", "root", "parola123");
+    public static ConnectionCredits getConnectionCredits() {
+        return new ConnectionCredits(
+                "jdbc:mysql://localhost:3306/AudioLibrary", "root", "parola123");
     }
 }

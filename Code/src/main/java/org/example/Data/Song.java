@@ -1,7 +1,6 @@
 package org.example.Data;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.HashMap;
 
 public class Song extends AbstractTableClassMapper {
@@ -18,7 +17,7 @@ public class Song extends AbstractTableClassMapper {
         setCorrespondingTable("Songs");
     }
 
-    public Song() {     // need it for import
+    public Song() { // need it for import
         setCorrespondingTable("Songs");
     }
 

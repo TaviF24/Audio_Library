@@ -1,13 +1,11 @@
 package org.example.DTOStorage.Serializer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.DTOs.AbstractDTO;
-import org.example.DTOs.PlaylistSongsDTO;
-
 import java.io.IOException;
 import java.io.OutputStream;
+import org.example.DTOs.AbstractDTO;
 
-public class JSONSerializer extends AbstractSerializer{
+public class JSONSerializer extends AbstractSerializer {
 
     public JSONSerializer() {
         setExtension(".json");

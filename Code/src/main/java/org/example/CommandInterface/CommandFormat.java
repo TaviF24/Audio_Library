@@ -42,6 +42,6 @@ public class CommandFormat {
             argsString.append(arg).append(' ');
         }
 
-        return command+ " " + argsString;
+        return command + " " + argsString;
     }
 }

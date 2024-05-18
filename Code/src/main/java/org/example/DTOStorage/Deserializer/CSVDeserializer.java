@@ -4,13 +4,12 @@ import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
-import org.example.DTOs.AbstractDTO;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import org.example.DTOs.AbstractDTO;
 
-public class CSVDeserializer implements Deserializer{
+public class CSVDeserializer implements Deserializer {
     @Override
     public Object deserialize(InputStream inputStream, AbstractDTO dto) {
 

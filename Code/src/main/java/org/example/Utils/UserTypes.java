@@ -13,7 +13,7 @@ public enum UserTypes {
      * @throws ClassNotFoundException if an invalid user type string is provided
      */
     public static UserTypes mapper(String userType) throws ClassNotFoundException {
-        switch (userType){
+        switch (userType) {
             case "ANONYMOUS" -> {
                 return ANONYMOUS;
             }

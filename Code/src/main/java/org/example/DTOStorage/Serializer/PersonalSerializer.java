@@ -1,15 +1,14 @@
 package org.example.DTOStorage.Serializer;
 
-import org.example.DTOs.AbstractDTO;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.example.DTOs.AbstractDTO;
 
-public class PersonalSerializer extends AbstractSerializer{
+public class PersonalSerializer extends AbstractSerializer {
 
     public PersonalSerializer() {
         setExtension(".txt");
@@ -22,14 +21,14 @@ public class PersonalSerializer extends AbstractSerializer{
         StringBuilder s = new StringBuilder();
         HashMap<String, Object> hashMap = dto.getAllFields();
         for (Map.Entry<String, Object> entry : hashMap.entrySet()) {
-            if(entry.getValue() instanceof List<?>){
+            if (entry.getValue() instanceof List<?>) {
                 s.append(entry.getKey()).append("\n");
                 List<Object> list = (List<Object>) entry.getValue();
                 s.append(list.size()).append("\n");
                 for (Object o : list) {
                     s.append(o.toString()).append("\n");
                 }
-            }else{
+            } else {
                 s.append(entry.getKey()).append(" -> ").append(entry.getValue()).append("\n");
             }
         }

@@ -12,10 +12,16 @@ public class DeserializerFactory {
      * @throws UnknownFormatException if the format is unknown
      */
     public static Deserializer create(String format) throws UnknownFormatException {
-        switch (format){
-            case "txt" -> {return new PersonalDeserializer();}
-            case "json" -> {return new JSONDeserializer();}
-            case "csv" -> {return new CSVDeserializer();}
+        switch (format) {
+            case "txt" -> {
+                return new PersonalDeserializer();
+            }
+            case "json" -> {
+                return new JSONDeserializer();
+            }
+            case "csv" -> {
+                return new CSVDeserializer();
+            }
             default -> throw new UnknownFormatException();
         }
     }

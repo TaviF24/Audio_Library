@@ -1,9 +1,8 @@
 package org.example.Data.Users;
 
+import java.util.HashMap;
 import org.example.Data.AbstractTableClassMapper;
 import org.example.Utils.UserTypes;
-
-import java.util.HashMap;
 
 public abstract class User extends AbstractTableClassMapper {
 
@@ -15,6 +14,7 @@ public abstract class User extends AbstractTableClassMapper {
     public User() {
         setCorrespondingTable("Users");
     }
+
     public User(String username, String password) {
         this.username = username;
         this.password = password;

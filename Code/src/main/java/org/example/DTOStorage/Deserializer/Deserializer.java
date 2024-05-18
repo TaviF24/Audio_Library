@@ -1,9 +1,7 @@
 package org.example.DTOStorage.Deserializer;
 
-import org.example.DTOs.AbstractDTO;
-
 import java.io.InputStream;
-import java.util.List;
+import org.example.DTOs.AbstractDTO;
 
 /**
  * Interface for deserializing data from an InputStream into objects.

@@ -1,18 +1,17 @@
 package org.example.CommandMapper;
 
+import java.util.Optional;
 import org.example.Commands.AbstractCommand;
 import org.example.Commands.PromoteCommand;
 import org.example.Exceptions.Unchecked.InvalidNumberOfParametersException;
 
-import java.util.Optional;
-
-public class PromoteCommandMapper implements CommandMapper{
+public class PromoteCommandMapper implements CommandMapper {
     @Override
     public Optional<AbstractCommand> tryMapCommand(String command, String[] args) {
-        if(!"promote".equals(command)){
+        if (!"promote".equals(command)) {
             return Optional.empty();
         }
-        if(args.length != 1){
+        if (args.length != 1) {
             throw new InvalidNumberOfParametersException(command);
         }
         String[] newArgs = new String[2];

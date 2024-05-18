@@ -1,7 +1,6 @@
 package org.example.Data;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 /**
  * Interface for mapping table classes to their respective columns.
@@ -14,5 +13,4 @@ public interface TableClassesMapper {
      * @return a map containing the columns of the implementing class
      */
     HashMap<String, Object> getColumns();
-
 }

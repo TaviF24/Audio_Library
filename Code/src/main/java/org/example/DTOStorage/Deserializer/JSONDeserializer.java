@@ -1,12 +1,11 @@
 package org.example.DTOStorage.Deserializer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.DTOs.AbstractDTO;
-
 import java.io.IOException;
 import java.io.InputStream;
+import org.example.DTOs.AbstractDTO;
 
-public class JSONDeserializer implements Deserializer{
+public class JSONDeserializer implements Deserializer {
     @Override
     public Object deserialize(InputStream inputStream, AbstractDTO dto) {
 

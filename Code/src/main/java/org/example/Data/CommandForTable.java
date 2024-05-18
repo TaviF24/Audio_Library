@@ -26,7 +26,7 @@ public class CommandForTable extends AbstractTableClassMapper {
 
     @Override
     public HashMap<String, Object> getColumns() {
-        HashMap<String, Object>hashMap = new HashMap<>();
+        HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("id", id);
         hashMap.put("idUser", idUser);
         hashMap.put("command", command);

@@ -1,9 +1,7 @@
 package org.example.CommandMapper;
 
-import org.example.Commands.AbstractCommand;
-import org.example.Commands.Command;
-
 import java.util.Optional;
+import org.example.Commands.AbstractCommand;
 
 /**
  * Interface for mapping strings to their corresponding commands implementations.

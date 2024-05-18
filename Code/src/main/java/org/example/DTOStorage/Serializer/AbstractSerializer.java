@@ -1,6 +1,6 @@
 package org.example.DTOStorage.Serializer;
 
-public abstract class AbstractSerializer implements Serializer{
+public abstract class AbstractSerializer implements Serializer {
     private String extension;
 
     public String getExtension() {

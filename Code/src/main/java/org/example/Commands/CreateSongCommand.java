@@ -6,7 +6,7 @@ import org.example.DatabaseManager.DBWrapper;
 import org.example.Exceptions.Unchecked.DataAlreadyAddedException;
 import org.example.Utils.UserTypes;
 
-public class CreateSongCommand extends AbstractCommand{
+public class CreateSongCommand extends AbstractCommand {
     public CreateSongCommand(String[] args) {
         super(args);
         addAllowedTypeUser(UserTypes.ADMIN);
@@ -16,10 +16,10 @@ public class CreateSongCommand extends AbstractCommand{
     @Override
     public boolean execute() {
         DBWrapper<Song> dbWrapper = new DBWrapper<>(Credits.getConnectionCredits());
-        String[] forCheck = new String[]{"name", "author"};
-        String[] forGet = new String[]{"id"};
+        String[] forCheck = new String[] {"name", "author"};
+        String[] forGet = new String[] {"id"};
         Song song = new Song(getArgs()[0], getArgs()[1], Integer.parseInt(getArgs()[2]));
-        if(!dbWrapper.selectCheckIfExists(song, forCheck, forGet).isEmpty()){
+        if (!dbWrapper.selectCheckIfExists(song, forCheck, forGet).isEmpty()) {
             throw new DataAlreadyAddedException("This song is already part of the library!");
         }
         dbWrapper.insertIntoDB(song);
