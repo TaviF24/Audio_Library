@@ -99,7 +99,7 @@ Check the [examples](./examples) folder to see some uses of the above commands.
   - The accepted file extensions are json, csv and txt. For the txt file, the format should be in the same style as personal
   - I had to put some methods even I do not use them here aswell (for the same reason)
   - In this code, when importing from csv file, the playlistName field will be the name of the file
-  - To work well and get some data from importing, please try to respect the format as much as possible. If you do not know how the formats look, try to export some data or check the [formats]() folder.
+  - To work well and get some data from importing, please try to respect the format as much as possible. If you do not know how the formats look, try to export some data or check the [formats](./formats) folder.
 
 
 
