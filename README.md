@@ -13,6 +13,9 @@ A Java-based application that allows users to create and store songs and playlis
 - Export and import system;
 - Audit system: store all the commands given by users.
 
+## Database diagram
+![Diagram image](./diagram.png)
+
 ## Types of users
 - Anonymous: Users who have not gone through a login step. Their access is limited to login and registration commands;
 - Authenticated: Users who have an account and their access consists in basic functions: create playlists, add songs to playlists, etc.;
