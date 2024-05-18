@@ -1,0 +1,19 @@
+listName
+5
+name -> nameSong1
+author -> authorSong1
+year -> 2003
+name -> nameSong2
+author -> authorSong2
+year -> 2004
+name -> nameSong3
+author -> authorSong3
+year -> 2005
+name -> nameSong4
+author -> authorSong4
+year -> 2024
+name -> nameSong5
+author -> authorSong5
+year -> 2009
+playlistName -> name_of_playlist
+

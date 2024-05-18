@@ -1,0 +1,24 @@
+{
+  "playlistName" : "name_of_playlist",
+  "listName" : [ {
+    "name" : "songName1",
+    "author" : "author1",
+    "year" : 2003
+  }, {
+    "name" : "songName2",
+    "author" : "author2",
+    "year" : 2004
+  }, {
+    "name" : "songName3",
+    "author" : "author3",
+    "year" : 2005
+  }, {
+    "name" : "songName4",
+    "author" : "author4",
+    "year" : 2024
+  }, {
+    "name" : "songName5",
+    "author" : "author5",
+    "year" : 2009
+  } ]
+}
