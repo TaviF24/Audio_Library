@@ -83,5 +83,6 @@ A Java-based application that allows users to create and store songs and playlis
 - Description: Reuse a command;
 - Users: Admin
 
-
+## Examples
+Check the [examples](./examples) folder to see some uses of the above commands.
 
