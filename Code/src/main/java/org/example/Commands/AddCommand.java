@@ -43,7 +43,6 @@ public class AddCommand extends AbstractCommand{
         }
         int playlistId = (int) arrayList.get(0);
         String playlistName = arrayList.get(1).toString();
-//        System.out.println(playlistId);
         boolean existError = false;
         forCheck = new String[]{"id"};
         forGet = new String[]{"name", "author"};

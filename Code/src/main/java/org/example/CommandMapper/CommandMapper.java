@@ -5,26 +5,21 @@ import org.example.Commands.Command;
 
 import java.util.Optional;
 
+/**
+ * Interface for mapping strings to their corresponding commands implementations.
+ */
 public interface CommandMapper {
 
-    /*
-    quit
-    login <numeUtilizator> <parolă>
-    register <numeUtilizator> <parolă>
-    logout
-    promote <numeUtilizator>
-    create song "<numeMelodie>" "<numeAutor>" <anLansare>
-    create playlist <numePlaylist>
-    list playlists
-    add byName "<playlistName>" <identificatorUnicMelodie>[ <identificatorUnicMelodie2> <identificatorUnicMelodie3> ...]
-    add byId "<identificatorUnicPlaylist>" <identificatorUnicMelodie>[ <identificatorUnicMelodie2> <identificatorUnicMelodie3> ...]
-    search <tipCriteriu> "<criteriuCăutare>"
-    export playlist <numePlaylist> <format>
-    audit <numeUtilizator>
-
-    */
-
-
+    /**
+     * Attempts to map the given command and arguments to an {@link AbstractCommand} object.
+     * <p>
+     * This method tries to create an {@link AbstractCommand} based on the provided command string and arguments.
+     * If the mapping is successful, the command is returned wrapped in an {@link Optional}.
+     * </p>
+     *
+     * @param command the command string to be mapped
+     * @param args the arguments for the command
+     * @return an {@link Optional} containing the mapped {@link AbstractCommand} if mapping is successful, otherwise an empty {@link Optional}
+     */
     Optional<AbstractCommand> tryMapCommand(String command, String[] args);
-
 }

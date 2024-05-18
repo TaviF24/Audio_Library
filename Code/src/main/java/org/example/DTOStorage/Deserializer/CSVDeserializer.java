@@ -8,7 +8,6 @@ import org.example.DTOs.AbstractDTO;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CSVDeserializer implements Deserializer{
@@ -26,7 +25,7 @@ public class CSVDeserializer implements Deserializer{
             return dto;
 
         } catch (IOException e) {
-            System.out.println("Deserializer error\n" + e);
+            System.out.println("CSV deserializer error\n" + e);
         }
 
         return null;

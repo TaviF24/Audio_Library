@@ -31,6 +31,18 @@ public class InputConverter {
             new HelpCommandMapper()
     );
 
+    /**
+     * Maps the given command format to an appropriate command object.
+     * <p>
+     * This method attempts to map the command string and its arguments from the provided
+     * {@link CommandFormat} to a corresponding {@link AbstractCommand} using available mappers.
+     * If the command cannot be mapped, an exception is thrown.
+     * </p>
+     *
+     * @param commandFormat the format of the command to be mapped
+     * @return the mapped {@link AbstractCommand} object, or {@code null} if mapping fails
+     * @throws UnknownCommandException if the command cannot be mapped to any known command
+     */
     public static AbstractCommand mapCommand(CommandFormat commandFormat){
         String command = commandFormat.getCommand();
         String[] args = commandFormat.getArgs();

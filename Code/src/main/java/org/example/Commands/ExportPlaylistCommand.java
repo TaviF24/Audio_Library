@@ -78,8 +78,6 @@ public class ExportPlaylistCommand extends AbstractCommand{
         String fileName = "src/main/java/org/example/ExportOutput/export_" +
                 Session.getSessionUser().getUsername() + "_" + playlistName + "_" + simpleDateFormat.format(new Date());
 
-//        System.out.println(fileName);
-
         ArrayList<PlaylistSongsDTO> playlistSongsDTOS = new ArrayList<>();
         playlistSongsDTOS.add(new PlaylistSongsDTO(playlistName, songs));
 

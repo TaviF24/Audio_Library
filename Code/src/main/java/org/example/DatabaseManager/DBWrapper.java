@@ -19,6 +19,14 @@ public class DBWrapper<T extends AbstractTableClassMapper> {
         this.password = connectionCredits.password();
     }
 
+    /**
+     * Creates the necessary tables in the database if they do not already exist.
+     * <p>
+     * This method establishes a database connection and executes SQL statements to create
+     * the required tables.
+     * If an SQL exception occurs, an error message is printed.
+     * </p>
+     */
     public void createTables() {
         try (Connection connection = DriverManager.getConnection(path, user, password);
                 Statement statement = connection.createStatement()) {
@@ -97,6 +105,11 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
         }
     }
 
+    /**
+     * Inserts the provided object into the corresponding database table.
+     *
+     * @param object the object to be inserted into the database
+     */
     public void insertIntoDB(T object){
 
         HashMap<String, Object> hashMap = object.getColumns();
@@ -142,6 +155,14 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
         }
     }
 
+    /**
+     * Selects records from the database based on specified columns to check and columns to retrieve.
+     *
+     * @param object the object with corresponding type representing the table
+     * @param columnsToCheck the columns to check for matching conditions
+     * @param columnsToGet the columns to retrieve values from
+     * @return an {@code ArrayList} of objects containing the selected records
+     */
     public ArrayList<Object> selectCheckIfExists(T object, String[] columnsToCheck, String[] columnsToGet){
         String table = object.getCorrespondingTable();
         StringBuilder selectString = new StringBuilder("SELECT ");
@@ -213,6 +234,17 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
         return results;
     }
 
+    /**
+     * Saves a command executed by a user to the database.
+     * <p>
+     * This method saves the command executed by the specified user to the database,
+     * along with a flag indicating its success or failure.
+     * </p>
+     *
+     * @param user the user who executed the command
+     * @param command the command executed
+     * @param flag a boolean flag indicating the success or failure of the command
+     */
     public void saveCommand(User user, String command, Boolean flag){
         String selectFromDB = """
                 SELECT id FROM Users WHERE username = ?;
@@ -235,6 +267,12 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
         }
     }
 
+    /**
+     * Retrieves the size of a database table corresponding to the provided object.
+     *
+     * @param object the object with corresponding type representing the table
+     * @return the size of the database table
+     */
     public int getSizeOfTable(T object){
         String table = object.getCorrespondingTable();
         int size = 0;
@@ -253,6 +291,13 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
         return size;
     }
 
+    /**
+     * Updates records in the database based on specified columns to update and columns to check.
+     *
+     * @param object the object with corresponding type representing the table
+     * @param columnsToUpdate the columns to update with new values
+     * @param columnsToCheck the columns to check for matching conditions
+     */
     public void updateIntoDB(T object, String[] columnsToUpdate, String[] columnsToCheck){
         String table = object.getCorrespondingTable();
         HashMap<String, Object> hashMap = object.getColumns();
@@ -306,6 +351,14 @@ CREATE TABLE IF NOT EXISTS PlaylistSongs (
         }
     }
 
+    /**
+     * Searches for records in the database based on specified columns to check and columns to retrieve.
+     *
+     * @param object the object with corresponding type representing the table
+     * @param columnsToCheck the columns to check for matching conditions
+     * @param columnsToGet the columns to retrieve values from
+     * @return an {@code ArrayList} of objects containing the selected records
+     */
     public ArrayList<Object> selectSearch(T object, String[] columnsToCheck, String[] columnsToGet){
         String table = object.getCorrespondingTable();
         HashMap<String, Object> hashMap = object.getColumns();

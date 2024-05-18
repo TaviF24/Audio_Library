@@ -16,10 +16,6 @@ public class JSONSerializer extends AbstractSerializer{
     @Override
     public void serialize(OutputStream outputStream, AbstractDTO dto) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-//        try {
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(outputStream, dto);
-//        } catch (IOException e) {
-//            System.out.println("JSON serializer error\n" + e);
-//        }
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(outputStream, dto);
     }
 }

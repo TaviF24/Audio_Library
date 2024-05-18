@@ -31,7 +31,6 @@ public class CreatePlaylistCommand extends AbstractCommand{
         ArrayList<Object> arrayList = dbWrapper.selectCheckIfExists(playlist, forCheck, forGet);
         if(!arrayList.isEmpty()){
             throw new DataAlreadyAddedException("You already have a playlist named " + getArgs()[0]);
-//            throw new PlaylistAlreadyAddedException(getArgs()[0]);
         }
         dbWrapper.insertIntoDB(playlist);
         return true;

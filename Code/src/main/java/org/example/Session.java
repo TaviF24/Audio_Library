@@ -24,6 +24,12 @@ public class Session {
         Session.sessionUser = sessionUser;
     }
 
+    /**
+     * Starts a new session with an anonymous user and begins listening for commands.
+     * <p>
+     * This method initializes the session user as an anonymous user and starts the command interface to listen for commands.
+     * </p>
+     */
     public static void start(){
         Session.setSessionUser(new AnonymousUser());
 

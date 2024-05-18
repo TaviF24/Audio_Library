@@ -2,7 +2,17 @@ package org.example.Utils;
 
 import java.util.ArrayList;
 
+/**
+ * Utility class for parsing input.
+ */
 public class InputParser {
+
+    /**
+     * Parses the input string to extract arguments.
+     *
+     * @param arguments the input string containing arguments
+     * @return an {@code ArrayList} containing parsed arguments
+     */
     public static ArrayList<String> getArgs(String arguments){
         String[] args = arguments.strip().split("\\s");
         boolean inQuotes = false;

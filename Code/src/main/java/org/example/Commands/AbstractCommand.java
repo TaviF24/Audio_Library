@@ -15,6 +15,11 @@ public abstract class AbstractCommand implements Command {
         userType = new ArrayList<>();
     }
 
+    /**
+     * Adds a new user type to the allowed types for this command.
+     *
+     * @param newUserType the new user type to add
+     */
     public void addAllowedTypeUser(UserTypes newUserType){
         userType.add(newUserType);
     }

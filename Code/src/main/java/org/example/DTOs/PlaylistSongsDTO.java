@@ -1,6 +1,5 @@
 package org.example.DTOs;
 
-import org.example.Data.Playlist;
 import org.example.Data.Song;
 
 import java.util.ArrayList;
@@ -71,6 +70,10 @@ public class PlaylistSongsDTO extends AbstractDTO{
                 if("songs".equals(currentLine[0])){
                     int nrOfSongs = Integer.parseInt(list.get(i+1));
                     i++;
+                    int rest = list.size()-i-1;
+                    if(rest < nrOfSongs*3){  //nr of fields
+                        throw new IndexOutOfBoundsException("Invalid input");
+                    }
                     for(int j=0; j<nrOfSongs; j++){
                         String name = "";
                         String author = "";

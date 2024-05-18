@@ -17,6 +17,9 @@ public class PageManager {
         pages = new ArrayList<>();
     }
 
+    /**
+     * Creates pages based on the content list, dividing it into subsets to fit into pages.
+     */
     public void createPages(){
         int nrOfTotalElements = content.size() / fieldsPerElement;
         nrOfPages = nrOfTotalElements / elementsPerPage;
@@ -32,6 +35,14 @@ public class PageManager {
         }
     }
 
+    /**
+     * Shows the result of a command for a specific page index.
+     *
+     * @param index the index of the page to show
+     * @param command the command used to generate the result
+     * @return a formatted string showing the command result for the specified page index
+     * @throws InexistentPageException if the specified page index is out of bounds
+     */
     public String showCommandResult(int index, String command){
         String finalMessage = "To view other pages run the query as follows: " + command +" [pageIndex]";
         if(nrOfPages == 0){

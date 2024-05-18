@@ -32,7 +32,6 @@ public class ListPlaylistsCommand extends AbstractCommand{
         pageManager.createPages();
 
         setSuccessMessage(pageManager.showCommandResult(Integer.parseInt(getArgs()[0]), "list playlists"));
-//        System.out.println(arrayList);
         return true;
     }
 }

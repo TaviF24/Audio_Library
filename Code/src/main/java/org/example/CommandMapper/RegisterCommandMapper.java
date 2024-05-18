@@ -14,7 +14,6 @@ public class RegisterCommandMapper implements CommandMapper{
         }
         if(args.length != 2){
             throw new InvalidNumberOfParametersException(command);
-//            return Optional.empty();
         }
         return Optional.of(new RegisterCommand(args));
     }

@@ -1,7 +1,9 @@
 package org.example.CommandInterface;
 
-import java.util.Arrays;
-
+/**
+ * Represents the format of a command, including the command string, its arguments,
+ * and the original command input.
+ */
 public class CommandFormat {
     private final String command;
     private final String[] args;

@@ -1,17 +1,18 @@
 package org.example;
 
-import org.example.CommandInterface.CommandInterface;
 import org.example.DatabaseManager.Credits;
 import org.example.DatabaseManager.DBWrapper;
-import org.example.Data.Users.AnonymousUser;
-import org.example.Data.Users.User;
-
-import java.io.*;
 
 public class App {
 
     private App() {}
 
+    /**
+     * Initializes the database and starts a session.
+     * <p>
+     * This method sets up the database tables using a {@link DBWrapper} and then starts a new session.
+     * </p>
+     */
     public static void RUN() {
 
         DBWrapper dbWrapper = new DBWrapper(Credits.getConnectionCredits());

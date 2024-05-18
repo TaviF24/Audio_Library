@@ -12,7 +12,7 @@ import org.example.Exceptions.Unchecked.InvisibleRedoException;
 import org.example.Exceptions.Unchecked.NoPermissionException;
 import org.example.InputConverter;
 import org.example.Data.Users.User;
-import org.example.Printer;
+import org.example.Utils.Printer;
 import org.example.Session;
 import org.example.Utils.InputParser;
 
@@ -33,6 +33,15 @@ public class CommandInterface {
         return INSTANCE;
     }
 
+    /**
+     * Listens for and processes commands from the given reader.
+     * <p>
+     * This method reads commands from the provided {@link Reader}, maps them to corresponding command objects,
+     * and executes them if permitted by the session user. The loop continues until a quit command is encountered.
+     * </p>
+     *
+     * @param reader the source from which commands are read
+     */
     public void listenForCommands(Reader reader){
 
         AbstractCommand command = null;
